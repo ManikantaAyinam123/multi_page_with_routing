@@ -33,23 +33,36 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-                <p className="nav-link text-dark fw-bold" activeClassAtyle="" onClick={() => navigate("/")}>
+              <li className="nav-item">
+                <p
+                  className="nav-link text-dark fw-bold"
+                  activeClassAtyle=""
+                  onClick={() => navigate("/")}
+                >
                   Home
                 </p>
               </li>
               <li className="nav-item">
-                <p className="nav-link text-dark fw-bold" onClick={() => navigate("/catagories")}>
+                <p
+                  className="nav-link text-dark fw-bold"
+                  onClick={() => navigate("/catagories")}
+                >
                   Categories
                 </p>
               </li>
               <li className="nav-item">
-                <p className="nav-link text-dark fw-bold" onClick={() => navigate("/cart")}>
+                <p
+                  className="nav-link text-dark fw-bold"
+                  onClick={() => navigate("/cart")}
+                >
                   Cart
                 </p>
               </li>
               <li className="nav-item">
-                <p className="nav-link text-dark fw-bold" onClick={() => navigate("/account")}>
+                <p
+                  className="nav-link text-dark fw-bold"
+                  onClick={() => navigate("/account")}
+                >
                   Account
                 </p>
               </li>

@@ -73,6 +73,21 @@ body {
   height: auto;
   margin: 20px auto;
 }
- .active{
+.active {
   color: red; /* Change the color to your desired color */
+}
+.side-content {
+  height: 500px;
+}
+
+.sticky-component {
+  position: sticky;
+  top: 100px;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
+  .sticky-component {
+    position: static; /* Or whichever position you want for mobile */
+    top: auto;
+  }
 }

@@ -3,8 +3,8 @@ import React from "react";
 const CatagoriesCards = (props) => {
   const ImagesData = props.image;
   return (
-    <div className="container">
-      <div className="row row-cols-1 row-cols-md-4 row-cols-lg-4 g-2 mt-5">
+    <div className="col-12 col-md-9 mt-3">
+      <div className="row row-cols-1  row-cols-md-2 row-cols-lg-3  row-cols-xl-4 g-2 ">
         {ImagesData?.map((item, index) => (
           <div key={index} className="col">
             <div className="card h-100">

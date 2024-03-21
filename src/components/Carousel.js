@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Carousel = () => {
   return (
-    <div>
+    <div className="mt-5">
      
       <div id="carouselExample" class="carousel slide">
         

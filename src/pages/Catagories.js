@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Catagoriesbanner from "../components/Catagoriesbanner";
 import CatagoriesCards from "../components/CatagoriesCards";
 import Footer from "../components/Footer";
+import FilterSection from "../components/CatagoriesFilter";
 
 const Catagories = () => {
   const imagesData = [
@@ -38,13 +39,34 @@ const Catagories = () => {
       imageUrl:
         "https://rukminim2.flixcart.com/image/612/612/jvtujrk0/t-shirt/a/c/b/s-2297835-roadster-original-imafgmwy7py68tef.jpeg?q=70",
     },
+    {
+      imageUrl:
+        "https://rukminim2.flixcart.com/image/612/612/jvtujrk0/t-shirt/a/c/b/s-2297835-roadster-original-imafgmwy7py68tef.jpeg?q=70",
+    },
+    {
+      imageUrl:
+        "https://rukminim2.flixcart.com/image/612/612/jvtujrk0/t-shirt/a/c/b/s-2297835-roadster-original-imafgmwy7py68tef.jpeg?q=70",
+    },
+    {
+      imageUrl:
+        "https://rukminim2.flixcart.com/image/612/612/jvtujrk0/t-shirt/a/c/b/s-2297835-roadster-original-imafgmwy7py68tef.jpeg?q=70",
+    },
   ];
   return (
     <div>
       <Navbar />
-      <Catagoriesbanner />
-      <CatagoriesCards image={imagesData} />
-      <h1>This is catagories page</h1>
+      <Catagoriesbanner/>
+      <div className="container">
+      <div className="row">
+        {/* Filter section */}
+        <FilterSection />
+
+        {/* Cards section */}
+        <CatagoriesCards image={imagesData} />
+      </div>
+    </div>
+     
+      
       <Footer/>
     </div>
   );
