@@ -5,7 +5,7 @@ const CatagoriesFilter = () => {
   return (
     <div className="col-12 col-md-3 col-sm-1  side-content sticky-component mt-3 ">
       <div className="">
-        <div className="border d-flex mb-3 bg-light">
+        <div className="border d-flex mb-3 bg-light shadow">
           <p className="p-2 mb-0 ms-4">
             <span className="small">Sort by :</span>
             <span className="text-black">New Arrivals</span>
@@ -16,7 +16,7 @@ const CatagoriesFilter = () => {
             />
           </p>
         </div>
-        <div className="border bg-light">
+        <div className="border bg-light shadow">
           <p className="p-2 mb-0 border-bottom">Shirts </p>
 
           <p className="p-2 mb-0 border-bottom">Hoodies </p>

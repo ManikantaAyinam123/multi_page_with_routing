@@ -3,10 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Carousel = () => {
   return (
-    <div className="mt-5">
-     
+    <div className="">
       <div id="carouselExample" class="carousel slide">
-        
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img

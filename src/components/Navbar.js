@@ -1,13 +1,35 @@
-import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  const location = useLocation();
+  const [actnav, setActNav] = useState("home");
+
+  useEffect(() => {
+    // Extract the current path from the location object
+    const currentPath = location.pathname;
+
+    // Determine the active navigation item based on the current path
+    let activeNavItem = "home";
+    if (currentPath === "/") {
+      activeNavItem = "home";
+    } else if (currentPath === "/categories") {
+      activeNavItem = "categories";
+    } else if (currentPath === "/cart") {
+      activeNavItem = "cart";
+    } else if (currentPath === "/account") {
+      activeNavItem = "account";
+    }
+
+    // Update the active navigation item state
+    setActNav(activeNavItem);
+  }, [location]);
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary border border-bottom">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary border border-bottom shadow">
         <div className="container-fluid ">
           <a className="navbar-brand me-0" href="/">
             <img
@@ -34,37 +56,52 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <p
-                  className="nav-link text-dark fw-bold"
-                  activeClassAtyle=""
-                  onClick={() => navigate("/")}
+                <NavLink
+                  key="home"
+                  className={`nav-link  fs-5 fw-bold me-2 ${
+                    actnav === "home" ? "text-warning" : "text-dark"
+                  }`}
+                  exact
+                  to={"/"}
                 >
                   Home
-                </p>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <p
-                  className="nav-link text-dark fw-bold"
-                  onClick={() => navigate("/catagories")}
+                <NavLink
+                  key="categories"
+                  className={`nav-link fw-bold  fs-5 me-2 ${
+                    actnav === "categories" ? "text-warning" : "text-dark"
+                  }`}
+                  exact
+                  to={"/categories"}
                 >
                   Categories
-                </p>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <p
-                  className="nav-link text-dark fw-bold"
-                  onClick={() => navigate("/cart")}
+                <NavLink
+                  key="cart"
+                  className={`nav-link fw-bold fs-5 me-2  ${
+                    actnav === "cart" ? "text-warning" : "text-dark"
+                  }`}
+                  exact
+                  to={"/cart"}
                 >
                   Cart
-                </p>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <p
-                  className="nav-link text-dark fw-bold"
-                  onClick={() => navigate("/account")}
+                <NavLink
+                  key="account"
+                  className={`nav-link fw-bold fs-5 me-2 ${
+                    actnav === "account" ? "text-warning" : "text-dark"
+                  }`}
+                  exact
+                  to={"/account"}
                 >
                   Account
-                </p>
+                </NavLink>
               </li>
             </ul>
           </div>

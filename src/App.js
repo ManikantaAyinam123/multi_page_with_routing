@@ -15,9 +15,9 @@ function App() {
          <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<Home/>} />
-          <Route path="/Catagories" element={<Catagories/>} />
-          <Route path="/Cart" element={<Cart/>} />
-          <Route path="/Account" element={<Account/>}/>
+          <Route path="/categories" element={<Catagories/>} />
+          <Route path="/cart" element={<Cart/>} />
+          <Route path="/account" element={<Account/>}/>
          </Routes>
         </BrowserRouter>
      

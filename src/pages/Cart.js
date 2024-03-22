@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import CartBanner from "../components/CartBanner";
 import CartCards from "../components/CartCards";
+import Footer from '../components/Footer';
 
 const Cart = () => {
   return (
@@ -9,9 +10,7 @@ const Cart = () => {
       <Navbar />
       <CartBanner/>
       <CartCards />
-      <div className="mt-5">
-        <h2 className="mt-5">This is cart page</h2>
-      </div>
+       <Footer/>
     </div>
   );
 };
