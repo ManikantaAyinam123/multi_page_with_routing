@@ -12,7 +12,7 @@ const CartBanner = () => {
     //   </video>
     // </div>
     <div>
-      <div className="container-fluid bg-black">
+      <div className="container-fluid bg-black shadow">
         <img src="./assets/images/cartbanner.jpg" className="img-fluid"></img>
       </div>
     </div>

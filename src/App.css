@@ -55,7 +55,7 @@ body {
   font-size: 18px;
   background: #fff;
 
-  /* Center slide text vertically */
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +74,7 @@ body {
   margin: 20px auto;
 }
 .active {
-  color: red; /* Change the color to your desired color */
+  color: red; 
 }
 .side-content {
   height: 500px;
@@ -87,7 +87,10 @@ body {
 }
 @media (max-width: 768px) {
   .sticky-component {
-    position: static; /* Or whichever position you want for mobile */
+    position: static; 
     top: auto;
   }
+}
+.cart p {
+  margin-bottom: 4px; 
 }
